@@ -1,0 +1,19 @@
+<div class="alert alert-success" role="alert">
+    รายการเปิดโหวต/เลือกตั้ง Online
+  </div>
+<div class="row row-cols-2">
+<div class="card w-50 mb-2" *ngFor = "let item of events">
+    <div class="card-body">
+      <h5 class="card-title">โหวต/เลือกตั้ง : {{item.e_title}}</h5>
+      <p class="card-text">สถานะ :
+        <span *ngIf="item.e_status === 'open'">
+        <button type="button" class="btn btn-success">OPEN</button>
+      </span>
+      <span *ngIf="item.e_status === 'close'">
+        <button type="button" class="btn btn-danger">CLOSE</button>
+      </span>
+      </p>
+      <a href="detail" class="btn btn-primary">DETAIL</a>
+    </div>
+  </div>
+</div>
